@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script src="js/d3.v3.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+    
+
+            
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+      document.getElementById('theme').setAttribute('href','css/theme/solarized.css');
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Cold_Fusion</h1>
+					
+					<p>
+				
+					</p>
+				</section>
+        <!--//
+				<section>
+					<h2>Hello There</h2>
+					<p>
+					
+					</p>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/santex/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/santex/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment roll-in">roll-in</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">http://en.wikipedia.org/wiki/Galileo_Galilei#mediaviewer/File:Galileo_facing_the_Roman_Inquisition.jpg</a>
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+        
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						reveal.js comes with a few themes built in: <br>
+						
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+	
+/
+
+        -->
+        			<section>
+                <h2>Relation</h2>
+           <div style="font-size:15px;">
+    <a target="_blank" href="/nerd?param=United States Department of Energy#ajax/home" class="tag label label-info" style="color:#000;"> United States Department of Energy</a>&nbsp;<a target="_blank" href="/nerd?param=deuterium#ajax/home" class="tag label label-info" style="color:#000;"> deuterium</a>&nbsp;<a target="_blank" href="/nerd?param=pathological science#ajax/home" class="tag label label-info" style="color:#000;"> pathological science</a>&nbsp;<a target="_blank" href="/nerd?param=heavy water#ajax/home" class="tag label label-info" style="color:#000;"> heavy water</a>&nbsp;<a target="_blank" href="/nerd?param=American Physical Society#ajax/home" class="tag label label-info" style="color:#000;"> American Physical Society</a>&nbsp;<a target="_blank" href="/nerd?param=American Chemical Society#ajax/home" class="tag label label-info" style="color:#000;"> American Chemical Society</a>&nbsp;<a target="_blank" href="/nerd?param=Utah#ajax/home" class="tag label label-info" style="color:#000;"> Utah</a>&nbsp;<a target="_blank" href="/nerd?param=The New York Times#ajax/home" class="tag label label-info" style="color:#000;"> The New York Times</a>&nbsp;<a target="_blank" href="/nerd?param=Steven E. Jones#ajax/home" class="tag label label-info" style="color:#000;"> Steven E. Jones</a>&nbsp;<a target="_blank" href="/nerd?param=Space and Naval Warfare Systems Center#ajax/home" class="tag label label-info" style="color:#000;"> Space and Naval Warfare Systems Center</a>&nbsp;<a target="_blank" href="/nerd?param=Peter L. Hagelstein#ajax/home" class="tag label label-info" style="color:#000;"> Peter L. Hagelstein</a>&nbsp;<a target="_blank" href="/nerd?param=palladium#ajax/home" class="tag label label-info" style="color:#000;"> palladium</a>&nbsp;<a target="_blank" href="/nerd?param=Oxford University Press#ajax/home" class="tag label label-info" style="color:#000;"> Oxford University Press</a>&nbsp;<a target="_blank" href="/nerd?param=neutrons#ajax/home" class="tag label label-info" style="color:#000;"> neutrons</a>&nbsp;<a target="_blank" href="/nerd?param=Naturwissenschaften#ajax/home" class="tag label label-info" style="color:#000;"> Naturwissenschaften</a>&nbsp;<a target="_blank" href="/nerd?param=Nathan Lewis#ajax/home" class="tag label label-info" style="color:#000;"> Nathan Lewis</a>&nbsp;<a target="_blank" href="/nerd?param=Muon-catalyzed fusion#ajax/home" class="tag label label-info" style="color:#000;"> Muon-catalyzed fusion</a>&nbsp;<a target="_blank" href="/nerd?param=muon-catalyzed fusion#ajax/home" class="tag label label-info" style="color:#000;"> muon-catalyzed fusion</a>&nbsp;<a target="_blank" href="/nerd?param=Martin Fleischmann#ajax/home" class="tag label label-info" style="color:#000;"> Martin Fleischmann</a>&nbsp;<a target="_blank" href="/nerd?param=Isomeric transition#ajax/home" class="tag label label-info" style="color:#000;"> Isomeric transition</a>&nbsp;<a target="_blank" href="/nerd?param=Georgia Institute of Technology#ajax/home" class="tag label label-info" style="color:#000;"> Georgia Institute of Technology</a>&nbsp;<a target="_blank" href="/nerd?param=CR-39#ajax/home" class="tag label label-info" style="color:#000;"> CR-39</a>&nbsp;<a target="_blank" href="/nerd?param=CERN#ajax/home" class="tag label label-info" style="color:#000;"> CERN</a>&nbsp;<a target="_blank" href="/nerd?param=Caltech#ajax/home" class="tag label label-info" style="color:#000;"> Caltech</a>&nbsp;<a target="_blank" href="/nerd?param=Brigham Young University#ajax/home" class="tag label label-info" style="color:#000;"> Brigham Young University</a>&nbsp;<a target="_blank" href="/nerd?param=Bhabha Atomic Research Centre#ajax/home" class="tag label label-info" style="color:#000;"> Bhabha Atomic Research Centre</a>&nbsp;<a target="_blank" href="/nerd?param=zeppelin#ajax/home" class="tag label label-info" style="color:#000;"> zeppelin</a>&nbsp;<a target="_blank" href="/nerd?param=Yoshiaki Arata#ajax/home" class="tag label label-info" style="color:#000;"> Yoshiaki Arata</a>&nbsp;<a target="_blank" href="/nerd?param=Wired Magazine#ajax/home" class="tag label label-info" style="color:#000;"> Wired Magazine</a>&nbsp;<a target="_blank" href="/nerd?param=Wired magazine#ajax/home" class="tag label label-info" style="color:#000;"> Wired magazine</a>&nbsp;<a target="_blank" href="/nerd?param=watt#ajax/home" class="tag label label-info" style="color:#000;"> watt</a>&nbsp;<a target="_blank" href="/nerd?param=Utility patent#ajax/home" class="tag label label-info" style="color:#000;"> Utility patent</a>&nbsp;<a target="_blank" href="/nerd?param=U.S. Secretary of Energy#ajax/home" class="tag label label-info" style="color:#000;"> U.S. Secretary of Energy</a>&nbsp;<a target="_blank" href="/nerd?param=U.S. Patent and Trademark Office#ajax/home" class="tag label label-info" style="color:#000;"> U.S. Patent and Trademark Office</a>&nbsp;<a target="_blank" href="/nerd?param=University of Utah#ajax/home" class="tag label label-info" style="color:#000;"> University of Utah</a>&nbsp;<a target="_blank" href="/nerd?param=University of Southampton#ajax/home" class="tag label label-info" style="color:#000;"> University of Southampton</a>&nbsp;<a target="_blank" href="/nerd?param=University of Missouri#ajax/home" class="tag label label-info" style="color:#000;"> University of Missouri</a>&nbsp;<a target="_blank" href="/nerd?param=Tritium#ajax/home" class="tag label label-info" style="color:#000;"> Tritium</a>&nbsp;<a target="_blank" href="/nerd?param=tritium#ajax/home" class="tag label label-info" style="color:#000;"> tritium</a>&nbsp;<a target="_blank" href="/nerd?param=Toyota Motor Corporation#ajax/home" class="tag label label-info" style="color:#000;"> Toyota Motor Corporation</a>&nbsp;<a target="_blank" href="/nerd?param=Thomas Graham chemist#ajax/home" class="tag label label-info" style="color:#000;"> Thomas Graham chemist</a>&nbsp;<a target="_blank" href="/nerd?param=Texas AM University#ajax/home" class="tag label label-info" style="color:#000;"> Texas AM University</a>&nbsp;<a target="_blank" href="/nerd?param=Texas AM#ajax/home" class="tag label label-info" style="color:#000;"> Texas AM</a>&nbsp;<a target="_blank" href="/nerd?param=temperature#ajax/home" class="tag label label-info" style="color:#000;"> temperature</a>&nbsp;<a target="_blank" href="/nerd?param=Tadahiko Mizuno#ajax/home" class="tag label label-info" style="color:#000;"> Tadahiko Mizuno</a>&nbsp;<a target="_blank" href="/nerd?param=strip mining#ajax/home" class="tag label label-info" style="color:#000;"> strip mining</a>&nbsp;<a target="_blank" href="/nerd?param=Steven E. Koonin#ajax/home" class="tag label label-info" style="color:#000;"> Steven E. Koonin</a>&nbsp;<a target="_blank" href="/nerd?param=Stanley Pons#ajax/home" class="tag label label-info" style="color:#000;"> Stanley Pons</a>&nbsp;<a target="_blank" href="/nerd?param=Stanford University#ajax/home" class="tag label label-info" style="color:#000;"> Stanford University</a>&nbsp;<a target="_blank" href="/nerd?param=Spencer Abraham#ajax/home" class="tag label label-info" style="color:#000;"> Spencer Abraham</a>&nbsp;<a target="_blank" href="/nerd?param=SPAWAR#ajax/home" class="tag label label-info" style="color:#000;"> SPAWAR</a>&nbsp;<a target="_blank" href="/nerd?param=sound#ajax/home" class="tag label label-info" style="color:#000;"> sound</a>&nbsp;<a target="_blank" href="/nerd?param=Sidney Kimmel#ajax/home" class="tag label label-info" style="color:#000;"> Sidney Kimmel</a>&nbsp;<a target="_blank" href="/nerd?param=scientific journal#ajax/home" class="tag label label-info" style="color:#000;"> scientific journal</a>&nbsp;<a target="_blank" href="/nerd?param=Scientific controlNegative#ajax/home" class="tag label label-info" style="color:#000;"> Scientific controlNegative</a>&nbsp;<a target="_blank" href="/nerd?param=Science magazine#ajax/home" class="tag label label-info" style="color:#000;"> Science magazine</a>&nbsp;<a target="_blank" href="/nerd?param=Rutgers University Press#ajax/home" class="tag label label-info" style="color:#000;"> Rutgers University Press</a>&nbsp;<a target="_blank" href="/nerd?param=Routledge#ajax/home" class="tag label label-info" style="color:#000;"> Routledge</a>&nbsp;<a target="_blank" href="/nerd?param=room temperature#ajax/home" class="tag label label-info" style="color:#000;"> room temperature</a>&nbsp;<a target="_blank" href="/nerd?param=Robert Huggins#ajax/home" class="tag label label-info" style="color:#000;"> Robert Huggins</a>&nbsp;<a target="_blank" href="/nerd?param=Robert Duncan physicist#ajax/home" class="tag label label-info" style="color:#000;"> Robert Duncan physicist</a>&nbsp;<a target="_blank" href="/nerd?param=Reproducibility#ajax/home" class="tag label label-info" style="color:#000;"> Reproducibility</a>&nbsp;<a target="_blank" href="/nerd?param=Reaction intermediate#ajax/home" class="tag label label-info" style="color:#000;"> Reaction intermediate</a>&nbsp;<a target="_blank" href="/nerd?param=Quantitative analysis chemistry#ajax/home" class="tag label label-info" style="color:#000;"> Quantitative analysis chemistry</a>&nbsp;<a target="_blank" href="/nerd?param=Pyroelectric fusion#ajax/home" class="tag label label-info" style="color:#000;"> Pyroelectric fusion</a>&nbsp;<a target="_blank" href="/nerd?param=proton#ajax/home" class="tag label label-info" style="color:#000;"> proton</a>&nbsp;<a target="_blank" href="/nerd?param=Princeton University Press#ajax/home" class="tag label label-info" style="color:#000;"> Princeton University Press</a>&nbsp;<a target="_blank" href="/nerd?param=pressure#ajax/home" class="tag label label-info" style="color:#000;"> pressure</a>&nbsp;<a target="_blank" href="/nerd?param=platinum group#ajax/home" class="tag label label-info" style="color:#000;"> platinum group</a>&nbsp;<a target="_blank" href="/nerd?param=planetary core#ajax/home" class="tag label label-info" style="color:#000;"> planetary core</a>&nbsp;<a target="_blank" href="/nerd?param=perpetual motion machine#ajax/home" class="tag label label-info" style="color:#000;"> perpetual motion machine</a>&nbsp;<a target="_blank" href="/nerd?param=peer review#ajax/home" class="tag label label-info" style="color:#000;"> peer review</a>&nbsp;<a target="_blank" href="/nerd?param=Patterson Power Cell#ajax/home" class="tag label label-info" style="color:#000;"> Patterson Power Cell</a>&nbsp;<a target="_blank" href="/nerd?param=patent#ajax/home" class="tag label label-info" style="color:#000;"> patent</a>&nbsp;<a target="_blank" href="/nerd?param=palladium hydride#ajax/home" class="tag label label-info" style="color:#000;"> palladium hydride</a>&nbsp;<a target="_blank" href="/nerd?param=Out-of-pocket expenses#ajax/home" class="tag label label-info" style="color:#000;"> Out-of-pocket expenses</a>&nbsp;<a target="_blank" href="/nerd?param=OppenheimerâPhillips process#ajax/home" class="tag label label-info" style="color:#000;"> OppenheimerâPhillips process</a>&nbsp;<a target="_blank" href="/nerd?param=null result#ajax/home" class="tag label label-info" style="color:#000;"> null result</a>&nbsp;<a target="_blank" href="/nerd?param=Nuclear transmutation#ajax/home" class="tag label label-info" style="color:#000;"> Nuclear transmutation</a>&nbsp;<a target="_blank" href="/nerd?param=nuclear transmutation#ajax/home" class="tag label label-info" style="color:#000;"> nuclear transmutation</a>&nbsp;<a target="_blank" href="/nerd?param=nuclear reaction#ajax/home" class="tag label label-info" style="color:#000;"> nuclear reaction</a>&nbsp;<a target="_blank" href="/nerd?param=Nuclear isomer#ajax/home" class="tag label label-info" style="color:#000;"> Nuclear isomer</a>&nbsp;<a target="_blank" href="/nerd?param=nuclear fusion#ajax/home" class="tag label label-info" style="color:#000;"> nuclear fusion</a>&nbsp;<a target="_blank" href="/nerd?param=Nobel Laureate#ajax/home" class="tag label label-info" style="color:#000;"> Nobel Laureate</a>&nbsp;<a target="_blank" href="/nerd?param=nickel#ajax/home" class="tag label label-info" style="color:#000;"> nickel</a>&nbsp;<a target="_blank" href="/nerd?param=New Scientist#ajax/home" class="tag label label-info" style="color:#000;"> New Scientist</a>&nbsp;<a target="_blank" href="/nerd?param=neutron#ajax/home" class="tag label label-info" style="color:#000;"> neutron</a>&nbsp;<a target="_blank" href="/nerd?param=Nernst equation#ajax/home" class="tag label label-info" style="color:#000;"> Nernst equation</a>&nbsp;<a target="_blank" href="/nerd?param=National Institute of Advanced Studies#ajax/home" class="tag label label-info" style="color:#000;"> National Institute of Advanced Studies</a>&nbsp;<a target="_blank" href="/nerd?param=MÃ¶ssbauer effect#ajax/home" class="tag label label-info" style="color:#000;"> MÃ¶ssbauer effect</a>&nbsp;<a target="_blank" href="/nerd?param=Ministry of International Trade and Industry#ajax/home" class="tag label label-info" style="color:#000;"> Ministry of International Trade and Industr</a>&nbsp;<a target="_blank" href="/nerd?param=Michael McKubre#ajax/home" class="tag label label-info" style="color:#000;"> Michael McKubre</a>&nbsp;<a target="_blank" href="/nerd?param=MeV#ajax/home" class="tag label label-info" style="color:#000;"> MeV</a>&nbsp;<a target="_blank" href="/nerd?param=metallic crystal#ajax/home" class="tag label label-info" style="color:#000;"> metallic crystal</a>&nbsp;<a target="_blank" href="/nerd?param=Massachusetts Institute of Technology#ajax/home" class="tag label label-info" style="color:#000;"> Massachusetts Institute of Technology</a>&nbsp;<a target="_blank" href="/nerd?param=Manual of Patent Examining Procedure#ajax/home" class="tag label label-info" style="color:#000;"> Manual of Patent Examining Procedure</a>&nbsp;<a target="_blank" href="/nerd?param=Main sequence#ajax/home" class="tag label label-info" style="color:#000;"> Main sequence</a>&nbsp;<a target="_blank" href="/nerd?param=magnetism#ajax/home" class="tag label label-info" style="color:#000;"> magnetism</a>&nbsp;<a target="_blank" href="/nerd?param=Luis Walter Alvarez#ajax/home" class="tag label label-info" style="color:#000;"> Luis Walter Alvarez</a>&nbsp;<a target="_blank" href="/nerd?param=laser#ajax/home" class="tag label label-info" style="color:#000;"> laser</a>&nbsp;<a target="_blank" href="/nerd?param=Kurt Peters chemist#ajax/home" class="tag label label-info" style="color:#000;"> Kurt Peters chemist</a>&nbsp;<a target="_blank" href="/nerd?param=Kevin Wolf#ajax/home" class="tag label label-info" style="color:#000;"> Kevin Wolf</a>&nbsp;<a target="_blank" href="/nerd?param=Karl Popper#ajax/home" class="tag label label-info" style="color:#000;"> Karl Popper</a>&nbsp;<a target="_blank" href="/nerd?param=Julian Schwinger#ajax/home" class="tag label label-info" style="color:#000;"> Julian Schwinger</a>&nbsp;<a target="_blank" href="/nerd?param=Journal of Informetrics#ajax/home" class="tag label label-info" style="color:#000;"> Journal of Informetrics</a>&nbsp;<a target="_blank" href="/nerd?param=John R. Huizenga#ajax/home" class="tag label label-info" style="color:#000;"> John R. Huizenga</a>&nbsp;<a target="_blank" href="/nerd?param=John Bockris#ajax/home" class="tag label label-info" style="color:#000;"> John Bockris</a>&nbsp;<a target="_blank" href="/nerd?param=Johann Rafelski#ajax/home" class="tag label label-info" style="color:#000;"> Johann Rafelski</a>&nbsp;<a target="_blank" href="/nerd?param=Istituto Nazionale di Fisica Nucleare#ajax/home" class="tag label label-info" style="color:#000;"> Istituto Nazionale di Fisica Nucleare</a>&nbsp;<a target="_blank" href="/nerd?param=Isotopes of hydrogen#ajax/home" class="tag label label-info" style="color:#000;"> Isotopes of hydrogen</a>&nbsp;<a target="_blank" href="/nerd?param=International Conference on Cold Fusion#ajax/home" class="tag label label-info" style="color:#000;"> International Conference on Cold Fusion</a>&nbsp;<a target="_blank" href="/nerd?param=Institute for Scientific Information#ajax/home" class="tag label label-info" style="color:#000;"> Institute for Scientific Information</a>&nbsp;<a target="_blank" href="/nerd?param=Indira Gandhi Centre for Atomic Research#ajax/home" class="tag label label-info" style="color:#000;"> Indira Gandhi Centre for Atomic Research</a>&nbsp;<a target="_blank" href="/nerd?param=Indian Institute of Technology#ajax/home" class="tag label label-info" style="color:#000;"> Indian Institute of Technology</a>&nbsp;<a target="_blank" href="/nerd?param=Incredible utility#ajax/home" class="tag label label-info" style="color:#000;"> Incredible utility</a>&nbsp;<a target="_blank" href="/nerd?param=IEEE Spectrum#ajax/home" class="tag label label-info" style="color:#000;"> IEEE Spectrum</a>&nbsp;<a target="_blank" href="/nerd?param=hydrogen#ajax/home" class="tag label label-info" style="color:#000;"> hydrogen</a>&nbsp;<a target="_blank" href="/nerd?param=Howard Kent Birnbaum#ajax/home" class="tag label label-info" style="color:#000;"> Howard Kent Birnbaum</a>&nbsp;<a target="_blank" href="/nerd?param=Houston Chronicle#ajax/home" class="tag label label-info" style="color:#000;"> Houston Chronicle</a>&nbsp;<a target="_blank" href="/nerd?param=high-temperature superconductivity#ajax/home" class="tag label label-info" style="color:#000;"> high-temperature superconductivity</a>&nbsp;<a target="_blank" href="/nerd?param=Helium-3#ajax/home" class="tag label label-info" style="color:#000;"> Helium-3</a>&nbsp;<a target="_blank" href="/nerd?param=greenhouse effect#ajax/home" class="tag label label-info" style="color:#000;"> greenhouse effect</a>&nbsp;<a target="_blank" href="/nerd?param=global warming#ajax/home" class="tag label label-info" style="color:#000;"> global warming</a>&nbsp;<a target="_blank" href="/nerd?param=George H. Miley#ajax/home" class="tag label label-info" style="color:#000;"> George H. Miley</a>&nbsp;<a target="_blank" href="/nerd?param=Gary Taubes#ajax/home" class="tag label label-info" style="color:#000;"> Gary Taubes</a>&nbsp;<a target="_blank" href="/nerd?param=gamma rays#ajax/home" class="tag label label-info" style="color:#000;"> gamma rays</a>&nbsp;<a target="_blank" href="/nerd?param=gamma ray#ajax/home" class="tag label label-info" style="color:#000;"> gamma ray</a>&nbsp;<a target="_blank" href="/nerd?param=gamma particle#ajax/home" class="tag label label-info" style="color:#000;"> gamma particle</a>&nbsp;<a target="_blank" href="/nerd?param=Friedrich Paneth#ajax/home" class="tag label label-info" style="color:#000;"> Friedrich Paneth</a>&nbsp;<a target="_blank" href="/nerd?param=Frank Close#ajax/home" class="tag label label-info" style="color:#000;"> Frank Close</a>&nbsp;<a target="_blank" href="/nerd?param=First law of thermodynamics#ajax/home" class="tag label label-info" style="color:#000;"> First law of thermodynamics</a>&nbsp;<a target="_blank" href="/nerd?param=Final Exam The Outer Limits#ajax/home" class="tag label label-info" style="color:#000;"> Final Exam The Outer Limits</a>&nbsp;<a target="_blank" href="/nerd?param=FedEx#ajax/home" class="tag label label-info" style="color:#000;"> FedEx</a>&nbsp;<a target="_blank" href="/nerd?param=Faraday-efficiency effect#ajax/home" class="tag label label-info" style="color:#000;"> Faraday-efficiency effect</a>&nbsp;<a target="_blank" href="/nerd?param=falsifiability#ajax/home" class="tag label label-info" style="color:#000;"> falsifiability</a>&nbsp;<a target="_blank" href="/nerd?param=Exxon Valdez oil spill#ajax/home" class="tag label label-info" style="color:#000;"> Exxon Valdez oil spill</a>&nbsp;<a target="_blank" href="/nerd?param=European Patent Office#ajax/home" class="tag label label-info" style="color:#000;"> European Patent Office</a>&nbsp;<a target="_blank" href="/nerd?param=euphemism#ajax/home" class="tag label label-info" style="color:#000;"> euphemism</a>&nbsp;<a target="_blank" href="/nerd?param=E. Paul Palmer#ajax/home" class="tag label label-info" style="color:#000;"> E. Paul Palmer</a>&nbsp;<a target="_blank" href="/nerd?param=Energy Catalyzer#ajax/home" class="tag label label-info" style="color:#000;"> Energy Catalyzer</a>&nbsp;<a target="_blank" href="/nerd?param=ENEA Italy#ajax/home" class="tag label label-info" style="color:#000;"> ENEA Italy</a>&nbsp;<a target="_blank" href="/nerd?param=electrolytic cell#ajax/home" class="tag label label-info" style="color:#000;"> electrolytic cell</a>&nbsp;<a target="_blank" href="/nerd?param=electrolysis#ajax/home" class="tag label label-info" style="color:#000;"> electrolysis</a>&nbsp;<a target="_blank" href="/nerd?param=electrochemistry#ajax/home" class="tag label label-info" style="color:#000;"> electrochemistry</a>&nbsp;<a target="_blank" href="/nerd?param=electricity#ajax/home" class="tag label label-info" style="color:#000;"> electricity</a>&nbsp;<a target="_blank" href="/nerd?param=Effective nuclear charge#ajax/home" class="tag label label-info" style="color:#000;"> Effective nuclear charge</a>&nbsp;<a target="_blank" href="/nerd?param=Douglas R. O. Morrison#ajax/home" class="tag label label-info" style="color:#000;"> Douglas R. O. Morrison</a>&nbsp;<a target="_blank" href="/nerd?param=David Goodstein#ajax/home" class="tag label label-info" style="color:#000;"> David Goodstein</a>&nbsp;<a target="_blank" href="/nerd?param=Crank person#ajax/home" class="tag label label-info" style="color:#000;"> Crank person</a>&nbsp;<a target="_blank" href="/nerd?param=Coulombs law#ajax/home" class="tag label label-info" style="color:#000;"> Coulombs law</a>&nbsp;<a target="_blank" href="/nerd?param=Consiglio Nazionale delle Ricerche#ajax/home" class="tag label label-info" style="color:#000;"> Consiglio Nazionale delle Ricerche</a>&nbsp;<a target="_blank" href="/nerd?param=conjecture#ajax/home" class="tag label label-info" style="color:#000;"> conjecture</a>&nbsp;<a target="_blank" href="/nerd?param=Compton edge#ajax/home" class="tag label label-info" style="color:#000;"> Compton edge</a>&nbsp;<a target="_blank" href="/nerd?param=collective identity#ajax/home" class="tag label label-info" style="color:#000;"> collective identity</a>&nbsp;<a target="_blank" href="/nerd?param=Coldfusion#ajax/home" class="tag label label-info" style="color:#000;"> Coldfusion</a>&nbsp;<a target="_blank" href="/nerd?param=Cold fission#ajax/home" class="tag label label-info" style="color:#000;"> Cold fission</a>&nbsp;<a target="_blank" href="/nerd?param=Chennai#ajax/home" class="tag label label-info" style="color:#000;"> Chennai</a>&nbsp;<a target="_blank" href="/nerd?param=chemical reaction#ajax/home" class="tag label label-info" style="color:#000;"> chemical reaction</a>&nbsp;<a target="_blank" href="/nerd?param=Chase N. Peterson#ajax/home" class="tag label label-info" style="color:#000;"> Chase N. Peterson</a>&nbsp;<a target="_blank" href="/nerd?param=celsius#ajax/home" class="tag label label-info" style="color:#000;"> celsius</a>&nbsp;<a target="_blank" href="/nerd?param=CBS#ajax/home" class="tag label label-info" style="color:#000;"> CBS</a>&nbsp;<a target="_blank" href="/nerd?param=California Institute of Technology#ajax/home" class="tag label label-info" style="color:#000;"> California Institute of Technology</a>&nbsp;<a target="_blank" href="/nerd?param=Bubble fusion#ajax/home" class="tag label label-info" style="color:#000;"> Bubble fusion</a>&nbsp;<a target="_blank" href="/nerd?param=Branching fraction#ajax/home" class="tag label label-info" style="color:#000;"> Branching fraction</a>&nbsp;<a target="_blank" href="/nerd?param=Bohr model#ajax/home" class="tag label label-info" style="color:#000;"> Bohr model</a>&nbsp;<a target="_blank" href="/nerd?param=Bart Simon#ajax/home" class="tag label label-info" style="color:#000;"> Bart Simon</a>&nbsp;<a target="_blank" href="/nerd?param=anti-nuclear movement#ajax/home" class="tag label label-info" style="color:#000;"> anti-nuclear movement</a>&nbsp;<a target="_blank" href="/nerd?param=American Scientist#ajax/home" class="tag label label-info" style="color:#000;"> American Scientist</a>&nbsp;<a target="_blank" href="/nerd?param=Alpha particle#ajax/home" class="tag label label-info" style="color:#000;"> Alpha particle</a>&nbsp;<a target="_blank" href="/nerd?param=Akira Kitamura#ajax/home" class="tag label label-info" style="color:#000;"> Akira Kitamura</a>&nbsp;<a target="_blank" href="/nerd?param=activation energy#ajax/home" class="tag label label-info" style="color:#000;"> activation energy</a>&nbsp;<a target="_blank" href="/nerd?param=acid rain#ajax/home" class="tag label label-info" style="color:#000;"> acid rain</a>&nbsp;<a target="_blank" href="/nerd?param=Accountability in Research#ajax/home" class="tag label label-info" style="color:#000;"> Accountability in Research</a>&nbsp;<a target="_blank" href="/nerd?param=1973 oil crisis#ajax/home" class="tag label label-info" style="color:#000;"> 1973 oil crisis</a>&nbsp;
+    </div>
+  			</section>      
+        
+		<section data-markdown>
+      
+					<script type="text/template">
+						## Cold_Fusion
+         
+						```
+            {
+   "cursor" : "14197",
+   "size" : 15,
+   "audio" : [
+      "http://www.dispatch.com/dispatch/export-content/sites/dispatch/multimedia/audio/2007/07/Robinette.mp3"
+   ],
+   "currentlang" : "en",
+   "article" : "'Free energy suppression' is a conspiracy theory which claims that advanced\ntechnology which would reshape current energy paradigms is being suppressed by\ncertain special interest groups. These groups are usually claimed to be\nassociated with the oil, coal, nuclear, or natural gas industry, to whom current\nenergy generation technology is profitable, or government agencies who view such\nas potentially detrimental to the national or world economic system.\n",
+   "linknr" : 458,
+   "url" : "Free_energy_suppression",
+   "recorded" : 1362903052,
+   "links" : 22,
+   "instances" : [
+      "uk",
+      "journal"
+   ],
+   "pdf" : [
+      "http://www.free-energy-info.co.uk/PJKbook.pdf"
+   ],
+   "categories" : [
+      "Conspiracy theories",
+      "Energy",
+      "Energy development",
+      "Perpetual motion"
+   ],
+   "headings" : [
+      "Description",
+      "Examples",
+      "See also",
+      "References"
+   ],
+   "image" : [
+      "//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Water_fuel_cell_capacitor.png/150px-Water_fuel_cell_capacitor.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/vector/images/search-ltr.png?303-4",
+      "//bits.wikimedia.org/images/wikimedia-button.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/poweredby_mediawiki_88x31.png"
+   ],
+   "tags" : [
+      [
+         "the_sunday_times",
+         "uk"
+      ],
+      [
+         "nature",
+         "journal"
+      ]
+   ],
+   "related" : [
+      "Conspiracy_theory",
+      "Technology",
+      "Suppression_of_dissent",
+      "Lobby_groups",
+      "Oil_industry",
+      "Coal_industry",
+      "Nuclear_industry",
+      "Natural_gas_industry",
+      "Technology",
+      "Thermodynamic_free_energy",
+      "Perpetual_motion",
+      "Zero-point_energy",
+      "Cold_fusion",
+      "Peer_review",
+      "Nexus_Magazine",
+      "Government",
+      "Lobby_groups",
+      "Fossil_fuel",
+      "Capitalism",
+      "Conspiracy_theory",
+      "Solar_cells",
+      "Biofuel",
+      "Electric_vehicles",
+      "Government",
+      "Lobby_groups",
+      "Pseudoscience",
+      "Institute_for_Energy_Analysis",
+      "Oak_Ridge_Associated_Universities",
+      "Nexus_magazine",
+      "Nexus_magazine",
+      "Motionless_Electromagnetic_Generator",
+      "J.P._Morgan",
+      "Cold_fusion",
+      "Stanley_Pons",
+      "Martin_Fleischmann",
+      "University_of_Utah",
+      "Eugene_Mallove",
+      "Norwich,_Connecticut",
+      "Robbery",
+      "Cold_fusion",
+      "Suppression_of_intellectual_dissent",
+      "The_Sunday_Times_(UK)",
+      "The_Columbus_Dispatch",
+      "Cerebral_aneurysm",
+      "Nature_(journal)",
+      "History_of_perpetual_motion_machines",
+      "Gasoline_pill",
+      "Thomas_Henry_Moray"
+   ],
+   "members" : [
+      "the_sunday_times",
+      "nature"
+   ]
+}
+						<section data-markdown>
+            {
+   "cursor" : "59165",
+   "size" : 15,
+   "audio" : [],
+   "currentlang" : "en",
+   "article" : "\n\nThe 'scientific revolution' was the dawning of modern science during the early\nmodern period, when developments in mathematics, physics, astronomy, biology,\nmedicine, and chemistry transformed views of society and nature. According\nto traditional accounts, the scientific revolution began in Europe towards the\nend of the Renaissance era and continued through the late 18th century,\ninfluencing the intellectual social movement known as the Enlightenment. While\nits dates are disputed, the publication in 1543 of Nicolaus Copernicus's [[De\nrevolutionibus orbium coelestium]] (On the Revolutions of the Heavenly Spheres)\nand Andreas Vesalius's [[De humani corporis fabrica]] (On the Fabric of the\nHuman body) is often cited as marking the beginning of the scientific\nrevolution. By the end of the 18th century the scientific revolution had given\nway to the \"Age of Reflection\".\n\nPhilosopher and historian Alexandre KoyrÃÂÃÂ© coined the term scientific revolution\nin 1939 to describe this epoch.\n",
+   "linknr" : 1033,
+   "url" : "Scientific_Revolution",
+   "recorded" : 1362373382,
+   "links" : 63,
+   "instances" : [
+      "philosophy",
+      "classical_element",
+      "instrument",
+      "mathematics",
+      "optics",
+      "philosophy",
+      "classical_element",
+      "classical_element",
+      "fuel",
+      "scientist",
+      "physics",
+      "classical_element",
+      "philosophy",
+      "astronomer",
+      "philosopher",
+      "classical_element"
+   ],
+   "pdf" : [],
+   "categories" : [
+      "History of science|Revolution, Scientific",
+      "Revolutions by type",
+      "Scientific revolution|"
+   ],
+   "headings" : [
+      "Significance of the revolution",
+      "New ideas",
+      "Ancient and medieval background",
+      "New approaches to nature",
+      "Scientific developments",
+      "Theoretical developments",
+      "Contrary views",
+      "See also",
+      "Notes",
+      "Sources"
+   ],
+   "image" : [
+      "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Libr0310.jpg/220px-Libr0310.jpg",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Galilee.jpg/200px-Galilee.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Ren%C3%A9_Descartes_i_samtal_med_Sveriges_drottning%2C_Kristina.jpg/200px-Ren%C3%A9_Descartes_i_samtal_med_Sveriges_drottning%2C_Kristina.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Antoni_van_Leeuwenhoek.png/180px-Antoni_van_Leeuwenhoek.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Denis_Papin.jpg/180px-Denis_Papin.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gottfried_Wilhelm_von_Leibniz.jpg/180px-Gottfried_Wilhelm_von_Leibniz.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/PeuerbachSuperioribus2.png/250px-PeuerbachSuperioribus2.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg/200px-Sir_Isaac_Newton_by_Sir_Godfrey_Kneller%2C_Bt.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/7/74/JKepler.jpg/180px-JKepler.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Ricci1.jpg/170px-Ricci1.jpg",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/magnify-clip.png",
+      "//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Nuvola_apps_kalzium.svg/28px-Nuvola_apps_kalzium.svg.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/vector/images/search-ltr.png?303-4",
+      "//bits.wikimedia.org/images/wikimedia-button.png",
+      "//bits.wikimedia.org/static-1.21wmf10/skins/common/images/poweredby_mediawiki_88x31.png"
+   ],
+   "tags" : [
+      [
+         "division",
+         "mathematics"
+      ],
+      [
+         "octant",
+         "instrument"
+      ],
+      [
+         "objective",
+         "optics"
+      ],
+      [
+         "coke",
+         "fuel"
+      ],
+      [
+         "stephen_gray",
+         "scientist"
+      ],
+      [
+         "motion",
+         "physics"
+      ],
+      [
+         "earth",
+         "classical_element"
+      ],
+      [
+         "water",
+         "classical_element"
+      ],
+      [
+         "air",
+         "classical_element"
+      ],
+      [
+         "fire",
+         "classical_element"
+      ],
+      [
+         "aether",
+         "classical_element"
+      ],
+      [
+         "mechanism",
+         "philosophy"
+      ],
+      [
+         "francis_bacon",
+         "philosopher"
+      ],
+      [
+         "induction",
+         "philosophy"
+      ],
+      [
+         "william_gilbert",
+         "astronomer"
+      ],
+      [
+         "francis_bacon",
+         "philosopher"
+      ],
+      [
+         "reduction",
+         "philosophy"
+      ]
+   ],
+   "related" : [
+      "Modern_science",
+      "Early_modern_period",
+      "Mathematics",
+      "Physics",
+      "Astronomy",
+      "Biology",
+      "Medicine",
+      "Chemistry",
+      "Europe",
+      "Renaissance",
+      "The_Enlightenment",
+      "Nicolaus_Copernicus",
+      "Andreas_Vesalius",
+      "Romanticism_in_science",
+      "Alexandre_KoyrÃÂ©",
+      "Middle_ages",
+      "Marxism",
+      "J._D._Bernal",
+      "Nicolaus_Copernicus",
+      "Tycho_Brahe",
+      "Johannes_Kepler",
+      "Galileo_Galilei",
+      "Francis_Bacon",
+      "RenÃÂ©_Descartes",
+      "Isaac_Newton",
+      "Gottfried_Leibniz",
+      "John_Donne",
+      "Herbert_Butterfield",
+      "Steven_Shapin",
+      "Crayon",
+      "Geocentrism",
+      "Heliocentrism",
+      "Aristotelian_physics",
+      "Atomism",
+      "History_of_gravitational_theory",
+      "Inertia",
+      "Impetus_theory",
+      "Galen",
+      "William_Harvey",
+      "Galileo_Galilei",
+      "Scientific_method",
+      "Mathematics",
+      "Renaissance",
+      "Nicolaus_Copernicus",
+      "Johannes_Kepler",
+      "Isaac_Newton",
+      "Galileo_Galilei",
+      "Heliocentrism",
+      "Newton's_laws_of_motion",
+      "Christiaan_Huygens",
+      "Ancient_Greece",
+      "Aristotle",
+      "Geocentric_model",
+      "Andreas_Vesalius",
+      "Andreas_Vesalius",
+      "Human_anatomy",
+      "Surgery",
+      "Ambroise_ParÃÂ©",
+      "Battlefield_medicine",
+      "Matteo_Realdo_Colombo",
+      "Anatomist",
+      "William_Harvey",
+      "Circulatory_system",
+      "Herman_Boerhaave",
+      "Microscope",
+      "Dentistry",
+      "Pierre_Fauchard",
+      "Pierre_Vernier",
+      "Vernier_scale",
+      "Evangelista_Torricelli",
+      "Barometer",
+      "Franciscus_Vieta",
+      "New_algebra",
+      "John_Napier",
+      "Logarithm",
+      "Edmund_Gunter",
+      "William_Oughtred",
+      "Multiplication",
+      "Division_(mathematics)",
+      "Slide_rule",
+      "Blaise_Pascal",
+      "Pascaline",
+      "Pascal's_Triangle",
+      "Fluid",
+      "Pressure",
+      "Vacuum",
+      "Projective_geometry",
+      "Pierre_de_Fermat",
+      "Probability_theory",
+      "Economics",
+      "Social_sciences",
+      "Gottfried_Leibniz",
+      "Pinwheel_calculator",
+      "Leibniz_wheel",
+      "Arithmometer",
+      "John_Hadley",
+      "Octant_(instrument)",
+      "Sextant",
+      "Parabolic_reflector",
+      "Objective_(optics)",
+      "Reflecting_telescope",
+      "Newtonian_telescope",
+      "Gregorian_telescope",
+      "Steam_digester",
+      "Steam_engine",
+      "Denis_Papin",
+      "Steam_digester",
+      "Steam_engine",
+      "Abraham_Darby_I",
+      "Abraham_Darby",
+      "Industrial_Revolution",
+      "Blast_furnace",
+      "Coke_(fuel)",
+      "Charcoal",
+      "Thomas_Newcomen",
+      "Newcomen_steam_engine",
+      "Otto_von_Guericke",
+      "Electricity",
+      "Stephen_Gray_(scientist)",
+      "Leyden_jar",
+      "Benjamin_Franklin",
+      "Thomas_Savery",
+      "Steam_engine",
+      "Georg_Agricola",
+      "Mineralogy",
+      "De_re_metallica",
+      "Robert_Boyle",
+      "Boyle's_Law",
+      "Atomic_theory",
+      "People_known_as_the_father_or_mother_of_something",
+      "Antoine_Lavoisier",
+      "Conservation_of_mass",
+      "Oxidation",
+      "Henry_Cavendish",
+      "Hydrogen",
+      "Joseph_Priestley",
+      "Oxygen",
+      "Binary_numeral_system",
+      "Germany",
+      "Leonhart_Fuchs",
+      "Botany",
+      "Otto_Brunfels",
+      "Hieronymus_Bock",
+      "Valerius_Cordus",
+      "Pharmacopoeia",
+      "Herbal",
+      "Carl_von_LinnÃÂ©",
+      "Taxonomy",
+      "Georges_Buffon",
+      "Charles_Darwin",
+      "Robert_Hooke",
+      "Christopher_Wren",
+      "Isaac_Newton",
+      "Edmond_Halley",
+      "Star_catalogue",
+      "Ptolemy",
+      "Maragheh_observatory",
+      "Heliocentrism",
+      "Galileo_Galilei",
+      "Acceleration",
+      "Motion_(physics)",
+      "Averroes",
+      "Ibn_Bajjah",
+      "Jean_Buridan",
+      "John_Philoponus",
+      "Theory_of_impetus",
+      "Giambattista_Benedetti",
+      "Galileo_Galilei",
+      "Johannes_Kepler",
+      "Ancient_Greece",
+      "Science_in_the_Middle_Ages",
+      "Byzantine_science",
+      "Islamic_science",
+      "Aristotelianism",
+      "Natural_philosophers",
+      "Classical_antiquity",
+      "Aristotle",
+      "Cosmos",
+      "Classical_elements",
+      "Earth_(classical_element)",
+      "Water_(classical_element)",
+      "Air_(classical_element)",
+      "Fire_(classical_element)",
+      "Aether_(classical_element)",
+      "Uniform_circular_motion",
+      "Ptolemaic_system",
+      "Eudoxus_of_Cnidus",
+      "Ptolemy",
+      "Celestial_spheres",
+      "Printing_press",
+      "Islamic_science",
+      "Mechanism_(philosophy)",
+      "Philosophy_of_chemistry",
+      "Scientific_empiricism",
+      "Thomas_Kuhn",
+      "Entropic_gravity",
+      "Chemistry",
+      "Alchemy",
+      "Astronomer",
+      "Tycho_Brahe",
+      "Physician",
+      "Paracelsus",
+      "Irish_people",
+      "Philosopher",
+      "Robert_Boyle",
+      "England",
+      "Thomas_Browne",
+      "Isaac_Newton",
+      "Scientific_method",
+      "Scientific_empiricism",
+      "Science_in_the_Middle_Ages",
+      "Nominalism",
+      "William_of_Ockham",
+      "Francis_Bacon_(philosopher)",
+      "Induction_(philosophy)",
+      "Deductive_reasoning",
+      "Modern_science",
+      "Astronomy",
+      "Optics",
+      "Euclid's_Elements",
+      "Nicolaus_Copernicus",
+      "Heliocentric_theory",
+      "Cosmology",
+      "Andreas_Vesalius",
+      "Galen",
+      "Franciscus_Vieta",
+      "William_Gilbert_(astronomer)",
+      "Magnetism",
+      "Electricity",
+      "Tycho_Brahe",
+      "Francis_Bacon_(philosopher)",
+      "Logic",
+      "Reduction_(philosophy)",
+      "Aristotle",
+      "Philosophy",
+      "Syllogism",
+      "Scientific_method",
+      "Galileo_Galilei",
+      "Telescope",
+      "Galilean_moons",
+      "Jupiter",
+      "Venus",
+      "Saturn",
+      "Sunspot",
+      "Johannes_Kepler",
+      "Kepler's_laws_of_planetary_motion",
+      "William_Harvey",
+      "RenÃÂ©_Descartes",
+      "Scientific_method",
+      "Antonie_van_Leeuwenhoek",
+      "Isaac_Newton",
+      "Newton's_law_of_universal_gravitation",
+      "Infinitesimal_calculus",
+      "Heliocentric_model",
+      "Gregorian_calendar",
+      "Pope_Gregory_XIII",
+      "Millennia",
+      "Geocentric_model",
+      "Stellar_parallax",
+      "Philosophy",
+      "Tycho_Brahe",
+      "Kepler's_laws_of_planetary_motion",
+      "Inertia",
+      "Ptolemy",
+      "Newton's_laws_of_motion",
+      "Gravity",
+      "Formula",
+      "Astronomy",
+      "Mechanics",
+      "Optics",
+      "Robert_Hooke",
+      "Christiaan_Huygens",
+      "RenÃÂ©_Descartes",
+      "Isaac_Newton",
+      "Chemistry",
+      "Biology",
+      "Continuity_thesis",
+      "Middle_Ages",
+      "Renaissance",
+      "Early_modern_period",
+      "Middle_Ages",
+      "Renaissance_of_the_12th_century",
+      "Science_in_medieval_Islam",
+      "Arun_Bala",
+      "Dialogue",
+      "Philosophy_of_mathematics",
+      "Philosophy",
+      "Atomism",
+      "Copernican_heliocentrism",
+      "Multiculturalism",
+      "Islamic_science",
+      "Ibn_al-Haytham",
+      "Scientific_method",
+      "History_of_science_and_technology_in_China",
+      "Machine",
+      "Hindu-Arabic_numeral_system",
+      "Force",
+      "Hermeticism",
+      "Eurocentrism",
+      "Greek_Philosophy",
+      "Greek_Mathematics",
+      "Aristotle",
+      "Archimedes",
+      "Heliocentrism",
+      "Buoyancy",
+      "Leucippus",
+      "Democritus",
+      "Pythagoreanism",
+      "History_of_science_in_the_Renaissance",
+      "History_of_the_Center_of_the_Universe",
+      "Science_in_the_Age_of_Enlightenment",
+      "Medical_Renaissance",
+      "Merton_Thesis",
+      "Natural_philosophy",
+      "Age_of_Enlightenment",
+      "Science_in_the_Middle_Ages",
+      "Scientific_law",
+      "Scientific_method",
+      "Rationalism",
+      "Revolution",
+      "British_Agricultural_Revolution",
+      "Neolithic_Revolution",
+      "Industrial_Revolution",
+      "Commercial_Revolution",
+      "Digital_Revolution",
+      "Chemical_Revolution",
+      "Information_Revolution",
+      "Robert_Briffault",
+      "George_Saliba",
+      "Columbia_University",
+      "Galileo_Galilei",
+      "Stillman_Drake",
+      "Stillman_Drake",
+      "Edward_Grant",
+      "Cambridge_University_Press",
+      "Ahmad_Y_Hassan",
+      "Donald_Routledge_Hill",
+      "Cambridge_University_Press",
+      "D._C._Lindberg",
+      "Allen_G._Debus",
+      "Abdus_Salam",
+      "World_Scientific"
+   ],
+   "members" : [
+      "mechanism",
+      "aether",
+      "octant",
+      "division",
+      "objective",
+      "induction",
+      "earth",
+      "fire",
+      "coke",
+      "stephen_gray",
+      "motion",
+      "water",
+      "reduction",
+      "william_gilbert",
+      "francis_bacon",
+      "air"
+   ]
+}
+```
+
+					</script>
+				</section>
+            
+					</p>
+				</section>
+        
+
+
+				<section id="galileo"  data-background="#b5533c" data-background-transition="zoom">
+        
+          
+					<p>
+<img src="Galileo.png">            
+            
+					</p>
+				</section>
+
+
+				<section id="kelvin"  data-background="#b5533c" data-background-transition="zoom">
+        
+          
+					<p>
+<img src="kelvin.png">            
+            
+					</p>
+				</section>
+
+
+				<section id="albert"  data-background="#b5533c" data-background-transition="zoom">
+        
+          
+					<p>
+<img src="albert.png">            
+            
+					</p>
+				</section>
+			</div>
+
+		</div>
+    <script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+    <script>
+			// Full list of configuration options available at:
+			// https://github.com/santex/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+   
+	</body>
+</html>
